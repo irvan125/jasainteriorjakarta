@@ -146,6 +146,49 @@
       .hero { position: relative; margin-top: 60px; text-align: center; background: #000; color: #fff; }
       .hero-content { padding: 40px 20px; }
       .hero h1 { font-size: 1.8rem; margin-bottom: 10px; }
+
+      /* Styling untuk Carousel dengan Teks */
+        .slide-item {
+          position: relative;
+          display: block;
+        }
+        .slide-text {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.7); /* Latar belakang hitam transparan */
+          color: #fff;
+          padding: 15px;
+          font-size: 0.9rem;
+          text-align: left;
+          opacity: 1; /* Teks langsung terlihat */
+          transition: opacity 0.3s ease;
+        }
+        .slide-text h4 {
+          margin: 0 0 5px 0;
+          color: #fff;
+          font-size: 1.1rem;
+        }
+        .slide-text p {
+          margin: 0;
+          font-size: 0.85rem;
+          line-height: 1.4;
+          color: #ccc;
+        }
+        
+        /* Responsif untuk HP */
+        @media (max-width: 600px) {
+          .slide-text {
+            padding: 10px;
+          }
+          .slide-text h4 {
+            font-size: 1rem;
+          }
+          .slide-text p {
+            font-size: 0.8rem;
+          }
+        }
       
       /* Layout Helpers */
       .container { padding: 20px; max-width: 800px; margin: 0 auto; }
@@ -360,6 +403,42 @@
           <amp-img src="https://jasainteriorjakarta.site/img/harga-jasa-3d-modeling.jpg" width="450" height="300" layout="responsive" alt="Jasa Interior Eksterior jakarta"></amp-img>
           <amp-img src="https://jasainteriorjakarta.site/img/jasa-desain-3d-model.jpg" width="450" height="300" layout="responsive" alt="Jasa Desain Interior Jakarta"></amp-img>
         </amp-carousel>
+
+        <h2 id="portfolio" class="section-title">Project Terbaru</h2>
+        <amp-carousel width="450" height="300" layout="responsive" type="slides" autoplay delay="5000">
+            <div class="slide-item">
+              <amp-img src="https://jasainteriorjakarta.site/img/portfolio-apartemen-sudirman.jpg" 
+                       width="450" height="300" layout="responsive" 
+                       alt="Desain Interior Apartemen Modern Japandi Sudirman Jakarta Pusat">
+              </amp-img>
+              <div class="slide-text">
+                <h4>Apartemen Modern Japandi - Sudirman</h4>
+                <p>Optimasi ruang terbatas di Sudirman, Jakarta Pusat. Menggabungkan konsep minimalis Skandinavia dengan kehangatan estetika Jepang.</p>
+              </div>
+            </div>
+            <div class="slide-item">
+              <amp-img src="https://jasainteriorjakarta.site/img/portfolio-kitchen-set-kelapa-gading.jpg" 
+                       width="450" height="300" layout="responsive" 
+                       alt="Pengerjaan Custom Kitchen Set Minimalis Kelapa Gading Jakarta Utara">
+              </amp-img>
+              <div class="slide-text">
+                <h4>Custom Kitchen Set - Kelapa Gading</h4>
+                <p>Pengerjaan kitchen set minimalis dengan material tahan rayap di Kelapa Gading. Solusi penyimpanan cerdas untuk dapur bersih.</p>
+              </div>
+            </div>
+          
+            <div class="slide-item">
+              <amp-img src="https://jasainteriorjakarta.site/img/portfolio-kantor-scbd.jpg" 
+                       width="450" height="300" layout="responsive" 
+                       alt="Renovasi Interior Kantor Profesional SCBD Jakarta Selatan">
+              </amp-img>
+              <div class="slide-text">
+                <h4>Interior Kantor Profesional - SCBD</h4>
+                <p>Transformasi ruang kantor di SCBD, Jakarta Selatan. Menciptakan lingkungan kerja yang ergonomis, kolaboratif, dan meningkatkan produktivitas.</p>
+              </div>
+            </div>        
+          </amp-carousel>
+                  
         
         <section class="container">
           <h2 class="section-title">Apa Kata Klien Kami</h2>
